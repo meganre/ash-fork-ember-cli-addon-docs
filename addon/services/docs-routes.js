@@ -40,7 +40,8 @@ export default Service.extend({
       let currentURL = router.get('rootURL') + router.get('url');
       currentURL = currentURL.replace('//', '/'); // dedup slashes
       if (router.get('location').implementation === 'hash') {
-        currentURL = `#${currentURL}`;
+				// In the case of hash routing, we need to ignore the rootURL
+        currentURL = '#' + router.get('url');
       }
       let longestIndex, longestPrefix;
       this.routeUrls.forEach((url, index) => {

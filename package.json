@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-addon-docs",
-  "version": "3.0.1",
+  "version": "3.0.3-hashFix",
   "description": "Easy, beautiful docs for your OSS Ember addons",
   "keywords": [
     "ember-addon",

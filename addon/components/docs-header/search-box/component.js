@@ -18,8 +18,8 @@ export default class DocsHeaderSearchBoxComponent extends Component {
 
   didInsertElement() {
     super.didInsertElement(...arguments);
-
-    this.fetchProject.perform();
+		// Sometimes this function doesn't exist, and throws an error which breaks tests in the app
+    this.fetchProject.perform && this.fetchProject.perform();
   }
 
   // TODO: The searchbox doesn't work without the project being fetched.
